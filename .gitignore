@@ -1,0 +1,38 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Build output
+bin/
+obj/
+
+# Statiq
+cache/
+temp/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# NuGet
+*.nupkg
+
+# Publish profiles
+Properties/PublishProfiles/
+
+# Optional local settings
+appsettings.Development.json
+
+# JetBrains
+_ReSharper*/
+*.DotSettings.user
