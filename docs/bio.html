@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@Document.GetString("Title") -  @Context.Settings.GetString("SiteTitle")</title>
+    <title>My Bio -  iminet.site</title>
 
     <meta name="color-scheme" content="light dark" />
     <meta name="description" content="Personal GitHub Pages site for iminet" />
-    <link rel="stylesheet" href="@Context.GetLink("/css/style.css")">
-    <link rel="icon" href="@Context.GetLink("images/favicon.png")" sizes="32x32" type="image/png">
-    <link rel="shortcut icon" href="@Context.GetLink("images/favicon.ico")">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="@Context.GetLink("sitemap.xml")">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/favicon.png" sizes="32x32" type="image/png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
     <link rel="canonical" href="https://iminet.site/">
 
@@ -21,13 +21,13 @@
     <meta property="og:type" content="website">
   
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=@Context.Settings.GetString("Google:GtagId")"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', '@Context.Settings.GetString("Google:GtagId")');
+        gtag('config', '');
     </script>
     <!-- Google tag (gtag.js) -->
 
@@ -48,15 +48,16 @@
 
   <main class="main">
     <div class="main-inner">
-        @RenderBody()
+        <h1>My Bio</h1>
+<p>This is my bio</p>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© @DateTime.Now.Year Iminetsoft</div>
+      <div>© 2026 Iminetsoft</div>
       <div>
-        Built exclusively for my GitHub Home | <a href="@Context.Settings.GetString("SiteUrl")">@Context.Settings.GetString("SiteUrl")</a>
+        Built exclusively for my GitHub Home | <a href="https://iminet.site">https://iminet.site</a>
       </div>
     </div>
   </footer>
