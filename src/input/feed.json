@@ -1,0 +1,9 @@
+{
+  "FeedRss": true,
+  "FeedTitle": "Iminet.site",
+  "FeedDescription": "This is my GitHub Home",
+  "FeedOrderKey": "Published",
+  "FeedOrderDescending": true,
+  "FeedSize": 20,
+  "FeedItemContent": ""
+}

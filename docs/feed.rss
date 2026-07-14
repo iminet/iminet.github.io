@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Iminet.site</title>
+		<link>/</link>
+		<description>This is my GitHub Home</description>
+		<copyright>2026</copyright>
+		<pubDate>Tue, 14 Jul 2026 21:19:03 GMT</pubDate>
+		<lastBuildDate>Tue, 14 Jul 2026 21:19:03 GMT</lastBuildDate>
+		<item>
+			<title>Home</title>
+			<link>/</link>
+			<description>This is my GitHub Home</description>
+			<guid isPermaLink="false">/</guid>
+			<pubDate>Tue, 14 Jul 2026 23:16:27 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Contact</title>
+			<link>/contact</link>
+			<description>Contact Me</description>
+			<guid isPermaLink="false">/contact</guid>
+			<pubDate>Tue, 14 Jul 2026 23:16:15 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>About</title>
+			<link>/about</link>
+			<description>About Me</description>
+			<guid isPermaLink="false">/about</guid>
+			<pubDate>Tue, 14 Jul 2026 23:15:59 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>My Bio</title>
+			<link>/bio</link>
+			<description>&lt;p&gt;This is my bio&lt;/p&gt;</description>
+			<guid isPermaLink="false">/bio</guid>
+			<pubDate>Sun, 12 Jul 2026 21:00:21 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+	</channel>
+</rss>
