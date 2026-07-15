@@ -7,30 +7,31 @@
 
     <meta name="color-scheme" content="light dark" />
     <meta name="description" content="Personal GitHub Pages site for iminet" />
-    <link rel="stylesheet" href="@Context.GetLink("/css/style.css")">
+    <link rel="stylesheet" href="@Context.GetLink("/css/style.css")" asp-append-version="true">
     <link rel="icon" href="@Context.GetLink("images/favicon.png")" sizes="32x32" type="image/png">
     <link rel="shortcut icon" href="@Context.GetLink("images/favicon.ico")">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="@Context.GetLink("sitemap.xml")">
 
-    <link rel="canonical" href="https://iminet.site/">
-
-    <meta property="og:title" content="iminet github home">
+    <!-- <meta property="og:title" content="iminet github home">
     <meta property="og:description" content="Personal GitHub Pages site for iminet">
     <meta property="og:image" content="https://iminet.site/images/og.png">
     <meta property="og:url" content="https://iminet.site/">
-    <meta property="og:type" content="website">
-  
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=@Context.Settings.GetString("Google:GtagId")"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <meta property="og:type" content="website"> -->
 
-        gtag('config', '@Context.Settings.GetString("Google:GtagId")');
-    </script>
-    <!-- Google tag (gtag.js) -->
+    <!-- OpenGraph -->
+    <open-graph 
+      type="website" 
+      site-name="@Context.Settings.GetString("SiteTitle")" 
+      description="@(Document.Get<string>("Description"))"
+      url="@Document.GetLink(includeHost: true)"
+      title="@Document.GetString("Title")"
+    />
+    <!-- OpenGraph -->
 
+    <!-- Google Analytics start -->
+    <google-analytics measurement-id="@Context.Settings.GetString("GoogleGtagId")" />
+    <!-- Google Analytics end -->
+    
 </head>
 <body>
     <header class="topbar">
