@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="@Context.GetLink("/css/style.css")" asp-append-version="true">
     <link rel="icon" href="@Context.GetLink("images/favicon.png")" sizes="32x32" type="image/png">
     <link rel="shortcut icon" href="@Context.GetLink("images/favicon.ico")">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="@Context.GetLink("sitemap.xml")">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="@Context.GetLink("sitemap.xml", true)">
+    <link rel="alternate" type="application/rss+xml" href="@Context.GetLink("sitemap.xml", true)">
 
     <!-- <meta property="og:title" content="iminet github home">
     <meta property="og:description" content="Personal GitHub Pages site for iminet">
     <meta property="og:image" content="https://iminet.site/images/og.png">
     <meta property="og:url" content="https://iminet.site/">
     <meta property="og:type" content="website"> -->
+
+    <link rel="canonical" href="@Document.GetLink(includeHost: true)" />
 
     <!-- OpenGraph -->
     <open-graph 
@@ -25,6 +28,7 @@
       description="@(Document.Get<string>("Description"))"
       url="@Document.GetLink(includeHost: true)"
       title="@Document.GetString("Title")"
+      image="@(Context.GetLink("images/og.png", true))"
     />
     <!-- OpenGraph -->
 
