@@ -11,7 +11,7 @@
     <link rel="icon" href="@Context.GetLink("images/favicon.png")" sizes="32x32" type="image/png">
     <link rel="shortcut icon" href="@Context.GetLink("images/favicon.ico")">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="@Context.GetLink("sitemap.xml", true)">
-    <link rel="alternate" type="application/rss+xml" href="@Context.GetLink("sitemap.xml", true)">
+    <link rel="alternate" type="application/rss+xml" href="@Context.GetLink("sitemap.xml", true)" title="@(Context.Settings.GetString("SiteName")) RSS" />
 
     <!-- <meta property="og:title" content="iminet github home">
     <meta property="og:description" content="Personal GitHub Pages site for iminet">
