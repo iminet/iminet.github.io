@@ -5,22 +5,22 @@
 		<link>https://iminet.site/</link>
 		<description>This is my GitHub Home</description>
 		<copyright>2026</copyright>
-		<pubDate>Sun, 19 Jul 2026 17:24:52 GMT</pubDate>
-		<lastBuildDate>Sun, 19 Jul 2026 17:24:52 GMT</lastBuildDate>
+		<pubDate>Sun, 19 Jul 2026 17:26:34 GMT</pubDate>
+		<lastBuildDate>Sun, 19 Jul 2026 17:26:34 GMT</lastBuildDate>
+		<item>
+			<title>404 - Page Not Found</title>
+			<link>https://iminet.site/404</link>
+			<description>&lt;p&gt;Sorry, the page you're looking for doesn't exist or has been moved.&lt;/p&gt;</description>
+			<guid>https://iminet.site/404</guid>
+			<pubDate>Sun, 19 Jul 2026 19:26:29 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>Contact</title>
 			<link>https://iminet.site/contact</link>
 			<description>Contact Me</description>
 			<guid>https://iminet.site/contact</guid>
 			<pubDate>Sun, 19 Jul 2026 19:24:47 GMT</pubDate>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>404 - Page Not Found</title>
-			<link>https://iminet.site/404</link>
-			<description>&lt;p&gt;Sorry, the page you're looking for doesn't exist or has been moved.&lt;/p&gt;</description>
-			<guid>https://iminet.site/404</guid>
-			<pubDate>Sun, 19 Jul 2026 18:07:05 GMT</pubDate>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 		<item>
