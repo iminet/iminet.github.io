@@ -1,4 +1,6 @@
-﻿using Statiq.App;
+﻿using Iminetsoft.Settings;
+using Microsoft.Extensions.DependencyInjection;
+using Statiq.App;
 using Statiq.Web;
 
 namespace IminetSite
@@ -9,6 +11,10 @@ namespace IminetSite
       await Bootstrapper
         .Factory
         .CreateWeb(args)
+        .ConfigureServices(services =>
+        {
+          services.AddSingleton<INIFile>(new Iminetsoft.Settings.INIFile(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "config", "config.ini"), true, true));
+        })
         .RunAsync();
   }
 }
