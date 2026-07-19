@@ -412,6 +412,13 @@ h1 {
     text-shadow: 0 1px 4px rgba(0,0,0,.4);
 }
 
+.e-mail:before 
+{
+    content: attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 
 @media (max-width: 900px) {
     .topbar-inner,
