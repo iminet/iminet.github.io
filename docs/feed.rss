@@ -5,8 +5,16 @@
 		<link>https://iminet.site/</link>
 		<description>This is my GitHub Home</description>
 		<copyright>2026</copyright>
-		<pubDate>Mon, 20 Jul 2026 05:28:34 GMT</pubDate>
-		<lastBuildDate>Mon, 20 Jul 2026 05:28:34 GMT</lastBuildDate>
+		<pubDate>Mon, 20 Jul 2026 08:12:34 GMT</pubDate>
+		<lastBuildDate>Mon, 20 Jul 2026 08:12:34 GMT</lastBuildDate>
+		<item>
+			<title>Home</title>
+			<link>https://iminet.site/</link>
+			<description>This is my GitHub Home</description>
+			<guid>https://iminet.site/</guid>
+			<pubDate>Mon, 20 Jul 2026 10:12:34 GMT</pubDate>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>My Bio</title>
 			<link>https://iminet.site/bio</link>
@@ -37,14 +45,6 @@
 			<description>Contact Me</description>
 			<guid>https://iminet.site/contact</guid>
 			<pubDate>Sun, 19 Jul 2026 19:24:47 GMT</pubDate>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Home</title>
-			<link>https://iminet.site/</link>
-			<description>This is my GitHub Home</description>
-			<guid>https://iminet.site/</guid>
-			<pubDate>Sun, 19 Jul 2026 16:37:15 GMT</pubDate>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 		<item>

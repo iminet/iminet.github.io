@@ -336,6 +336,29 @@ h1 {
     border-top: 1px solid var(--line);
 }
 
+section.home-slogan
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 2.0em 0;
+    padding: 15px;
+}
+
+section.home-slogan > big
+{
+    display: block;
+    font-size: 68px;
+    line-height: 1.2em;
+}
+
+section.home-slogan > span
+{
+    display: inline-block;
+    color: var(--muted);
+    line-height: 3.0em;
+}
+
 .footer-inner {
     padding-top: 24px;
     padding-bottom: 24px;
