@@ -1,4 +1,5 @@
-﻿using Iminetsoft.Settings;
+﻿using IminetSite.Services;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Statiq.App;
 using Statiq.Web;
@@ -13,7 +14,7 @@ namespace IminetSite
         .CreateWeb(args)
         .ConfigureServices(services =>
         {
-          services.AddSingleton<INIFile>(new Iminetsoft.Settings.INIFile(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "config", "config.ini"), true, true));
+          services.AddSingleton<GithubService>();
         })
         .RunAsync();
   }

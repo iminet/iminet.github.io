@@ -447,6 +447,39 @@ section.home-slogan > span
     direction: rtl;
 }
 
+table
+{
+        background-color: #f8f9fa;
+        width: 100%;
+        border: 1px solid #a2a9b1;
+        border-spacing: 0;
+}
+
+table > thead > tr > td
+{
+        font-weight: bold;
+        background-color: #EAECF0;
+        border-bottom: 1px solid #a2a9b1;
+}
+
+table tr
+{
+        padding: 3px;
+        margin:0;
+}
+
+table tr > td
+{
+        padding: 0.2em 0.4em;
+        margin:0;
+        border-bottom: 1px solid #a2a9b1;
+}
+
+table td, table th { word-break: break-word; }
+
+.table-wrapper { box-sizing: border-box; display: block; margin: 10px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */ }
+.table-wrapper::-webkit-scrollbar { display: none; }
+
 
 @media (max-width: 900px) {
     .topbar-inner,
