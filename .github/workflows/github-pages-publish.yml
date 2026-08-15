@@ -1,7 +1,11 @@
-name: Statiq app deployment
+name: statiq-deployment
 
 on:
   workflow_dispatch:
+
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -10,8 +14,11 @@ permissions:
   id-token: write
 
 jobs:
-  deploy-test:
+  deploy:
     runs-on: ubuntu-latest
+
+    env:
+      TZ: Europe/Budapest
 
     steps:
       - name: Checkout
@@ -46,3 +53,6 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./output
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
