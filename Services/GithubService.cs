@@ -3,8 +3,6 @@ using Iminetsoft.Iminetcore.Application;
 using Iminetsoft.Iminetcore.AspNet.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using NUnit.Framework.Internal;
 using Octokit;
 
 namespace IminetSite.Services
@@ -13,11 +11,13 @@ namespace IminetSite.Services
     {
         private readonly ILogger<GithubService>? logger;
         private readonly IConfiguration? configuration;
+        private readonly IReadOnlySettings? settings;
         private readonly AppSettings? appsettings;
 
 
-        public GithubService(ILogger<GithubService>? logger, IConfiguration? configuration)
+        public GithubService(ILogger<GithubService>? logger, IConfiguration? configuration, IReadOnlySettings? settings)
         {
+            this.settings = settings;
             this.logger = logger;
             this.configuration = configuration;
             logger?.LogDebug("Github service initialized");
@@ -29,6 +29,11 @@ namespace IminetSite.Services
         {
             public string? UserName { get; set; }
             public string? Token { get; set; }
+        }
+
+        public string Test()
+        {
+            return settings.GetString("STATIQ_TEST");
         }
 
         public async Task<List<GthubItem>> Public()
