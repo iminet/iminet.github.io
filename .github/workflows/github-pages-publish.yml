@@ -42,6 +42,8 @@ jobs:
         run: dotnet restore
 
       - name: Generate site
+        env:
+          STATIQ_TEST: ${{ vars.STATIQ_TEST }}
         run: dotnet run --no-restore -- -o output
 
       - name: Inspect generated site
