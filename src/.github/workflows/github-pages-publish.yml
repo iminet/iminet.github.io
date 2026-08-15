@@ -1,0 +1,48 @@
+name: Statiq app deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.x'
+
+      - name: Add GitHub Packages source
+        run: >
+          dotnet nuget add source
+          "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+          --name github
+          --username "${{ github.actor }}"
+          --password "${{ secrets.GITHUB_TOKEN }}"
+          --store-password-in-clear-text
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Generate site
+        run: dotnet run --no-restore -- -o output
+
+      - name: Inspect generated site
+        run: |
+          echo "Generated files:"
+          find output -type f | sort
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./output
