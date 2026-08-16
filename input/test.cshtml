@@ -12,6 +12,13 @@ IncludeInSitemap: false
 
 <p>Site URL: @common.Probe()</p>
 
+<p>Host: @settings.GetString("host")</p>
+
+@foreach(var key in settings.Keys)
+{
+    <p>@key</p>
+}
+
 <hr />
 
 <table>

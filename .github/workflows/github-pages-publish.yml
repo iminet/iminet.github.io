@@ -47,6 +47,7 @@ jobs:
       - name: Generate site
         env:
           STATIQ_TEST: ${{ vars.STATIQ_TEST }}
+          SiteUrl: ${{ vars.SITE_URL }}
         run: dotnet run --no-restore -- -o output
 
       - name: Inspect generated site

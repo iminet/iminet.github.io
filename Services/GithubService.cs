@@ -13,6 +13,7 @@ namespace IminetSite.Services
         private readonly IConfiguration? configuration;
         private readonly IReadOnlySettings? settings;
         private readonly AppSettings? appsettings;
+        private string? github_token;
 
 
         public GithubService(ILogger<GithubService>? logger, IConfiguration? configuration, IReadOnlySettings? settings)
@@ -23,6 +24,8 @@ namespace IminetSite.Services
             logger?.LogDebug("Github service initialized");
 
             appsettings = configuration?.Get<AppSettings>();
+
+            this.github_token = settings.GetString("GITHUB_TOKEN");
         }
 
         public class GithubSettings
@@ -38,11 +41,14 @@ namespace IminetSite.Services
 
         public async Task<List<GithubItem>> PublicRepos()
         {
+            /* This needs in the future for accessing authenticated */
             //var token = settings.GetString("GITHUB_TOKEN");
             //if (String.IsNullOrWhiteSpace(token)) return new();
 
             var resp = new List<GithubItem>();
             var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));
+
+            // Public access, public repo
             var repolist = await github.Repository.GetAllForUser("iminet"); 
 
             repolist.Where(r => !r.Private).ToList().ForEach(r => resp.Add(new GithubItem()
@@ -53,7 +59,7 @@ namespace IminetSite.Services
                 FullName = r.FullName,
                 PushedAt = r.PushedAt?.DateTime,
                 UpdatedAt = r.UpdatedAt.DateTime,
-                Url = new Uri(r.Url),
+                Url = new Uri(r.HtmlUrl),
             }));
 
             return resp;
