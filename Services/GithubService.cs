@@ -36,13 +36,16 @@ namespace IminetSite.Services
             return settings.GetString("STATIQ_TEST");
         }
 
-        public async Task<List<GthubItem>> Public()
+        public async Task<List<GithubItem>> PublicRepos()
         {
-            var resp = new List<GthubItem>();
+            //var token = settings.GetString("GITHUB_TOKEN");
+            //if (String.IsNullOrWhiteSpace(token)) return new();
+
+            var resp = new List<GithubItem>();
             var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));
             var repolist = await github.Repository.GetAllForUser("iminet"); 
 
-            repolist.ToList().ForEach(r => resp.Add(new GthubItem()
+            repolist.Where(r => !r.Private).ToList().ForEach(r => resp.Add(new GithubItem()
             {
                 Name = r.Name,
                 CreatedAt = r.CreatedAt.DateTime,
@@ -50,7 +53,7 @@ namespace IminetSite.Services
                 FullName = r.FullName,
                 PushedAt = r.PushedAt?.DateTime,
                 UpdatedAt = r.UpdatedAt.DateTime,
-                Url = new Uri(r.Url)
+                Url = new Uri(r.Url),
             }));
 
             return resp;

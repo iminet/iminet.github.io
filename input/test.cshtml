@@ -4,6 +4,7 @@ DestinationPath: test/index.html
 IncludeInSitemap: false
 -*@
 @inject CommonService common
+@inject GithubService github
 
 <h1>Test</h1>
 
@@ -12,6 +13,21 @@ IncludeInSitemap: false
 <p>Site URL: @common.Probe()</p>
 
 <hr />
+
+<table>
+    <thead>
+        <tr><td>Repo</td><td>Updated</td><td>Description</td></tr>
+    </thead>
+    @foreach(var item in await github.PublicRepos())
+    {
+        <tr>
+            <td class="nowrap"><a href="@item.Url" target="_blank">@item.Name</a></td>
+            <td class="nowrap">@item.UpdatedAt?.ToString("MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+</table>
+
 
 <fieldset>
     <legend>Comment section</legend>
