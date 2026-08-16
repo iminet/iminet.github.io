@@ -14,6 +14,8 @@ IncludeInSitemap: false
 
 <p>Host: @settings.GetString("host")</p>
 
+<p>@(Document.Get(WebKeys.IncludeInSitemap, true) ? "Public" : "Private")</p>
+
 @foreach(var key in settings.Keys)
 {
     <p>@key</p>
