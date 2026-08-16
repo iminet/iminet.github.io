@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Iminetcore" Version="26.8.2418.4443" />
+    <PackageReference Include="Iminetcore" Version="26.8.2419.568" />
     <PackageReference Include="Octokit" Version="14.0.0" />
     <PackageReference Include="Statiq.Web" Version="1.0.0-beta.60" />
   </ItemGroup>

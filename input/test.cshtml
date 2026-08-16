@@ -1,0 +1,29 @@
+@*-
+Title: Test page
+DestinationPath: test/index.html
+IncludeInSitemap: false
+-*@
+@inject CommonService common
+
+<h1>Test</h1>
+
+<p>This is a test page!</p>
+
+<p>Site URL: @common.Probe()</p>
+
+<hr />
+
+<fieldset>
+    <legend>Comment section</legend>
+
+    <giscus
+        repo="iminet/iminet.github.io"
+        repo-id="R_kgDOTB6_rg"
+        category="General"
+        category-id="DIC_kwDOTB6_rs4DDZix"
+        lang="en"
+        reactions-enabled="false"
+        input-position="Iminetsoft.Iminetcore.AspNet.TagHelpers.GiscusInputPosition.Top"
+    />
+
+</fieldset>

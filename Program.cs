@@ -15,6 +15,7 @@ namespace IminetSite
         .ConfigureServices(services =>
         {
           services.AddSingleton<GithubService>();
+          services.AddSingleton<CommonService>();
         })
         .RunAsync();
   }
