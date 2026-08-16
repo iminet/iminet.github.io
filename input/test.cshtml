@@ -8,47 +8,15 @@ IncludeInSitemap: false
 
 <h1>Test</h1>
 
-<p>This is a test page!</p>
+<section>
 
-<p>Site URL: @common.Probe()</p>
+    <p>This is a test page!</p>
 
-<p>Host: @settings.GetString("host")</p>
+    <p>Site URL: @common.Probe()</p>
 
-<p>@(Document.Get(WebKeys.IncludeInSitemap, true) ? "Public" : "Private")</p>
+    <p>Host: @settings.GetString("host")</p>
 
-@foreach(var key in settings.Keys)
-{
-    <p>@key</p>
-}
+    <p>@(Document.Get(WebKeys.IncludeInSitemap, true) ? "Public" : "Private")</p>
 
-<hr />
+</section>
 
-<table>
-    <thead>
-        <tr><td>Repo</td><td>Updated</td><td>Description</td></tr>
-    </thead>
-    @foreach(var item in await github.PublicRepos())
-    {
-        <tr>
-            <td class="nowrap"><a href="@item.Url" target="_blank">@item.Name</a></td>
-            <td class="nowrap">@item.UpdatedAt?.ToString("MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)</td>
-            <td>@item.Description</td>
-        </tr>
-    }
-</table>
-
-
-<fieldset>
-    <legend>Comment section</legend>
-
-    <giscus
-        repo="iminet/iminet.github.io"
-        repo-id="R_kgDOTB6_rg"
-        category="General"
-        category-id="DIC_kwDOTB6_rs4DDZix"
-        lang="en"
-        reactions-enabled="false"
-        input-position="Iminetsoft.Iminetcore.AspNet.TagHelpers.GiscusInputPosition.Top"
-    />
-
-</fieldset>
