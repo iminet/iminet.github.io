@@ -1,5 +1,7 @@
+using System.Net.Http.Json;
 using System.Reflection;
 using Iminetsoft.Iminetcore.Application;
+using Iminetsoft.Iminetcore.AspNet.Models;
 using Microsoft.Extensions.Logging;
 
 namespace IminetSite.Services
@@ -18,9 +20,14 @@ namespace IminetSite.Services
             this.logger = logger;
         }
 
-        public string Probe()
+        public async Task<string> Probe()
         {
-            return $"{settings.GetString("SiteUrl")} :: {settings.GetString("GITHUB_USER")}";
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetFromJsonAsync<ApiResult<string>>($"{settings.GetString("BACKEND_API_URL")}api/v2/ping");
+
+                return result?.Data ?? "Error";
+            }
         }
 
         public Dictionary<string,object> SystemCheck()

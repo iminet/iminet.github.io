@@ -13,7 +13,7 @@ Description: Test page, do not follow!
 
     <p>This is a test page!</p>
 
-    <p>Site URL: @common.Probe()</p>
+    <p>Site URL: @(await common.Probe())</p>
 
     <p>Host: @settings.GetString("host")</p>
 

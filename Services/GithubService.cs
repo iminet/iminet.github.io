@@ -48,9 +48,10 @@ namespace IminetSite.Services
 
             var resp = new List<GithubItem>();
             var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));
+            github.Credentials = new Credentials(token);
 
             // Public access, public repo
-            var repolist = await github.Repository.GetAllForUser("iminet"); 
+            var repolist = await github.Repository.GetAllForCurrent();
 
             repolist.Where(r => !r.Private && !r.Archived).ToList().ForEach(r => resp.Add(new GithubItem()
             {
