@@ -17,7 +17,7 @@ These are the open source projects I'm working or contributing on. Feel free to 
         <thead>
             <tr><td>Repo</td><td>Updated</td><td class="nowrap">Fork</td><td>Description</td></tr>
         </thead>
-        @foreach(var item in await github.PublicRepos() ?? new List<Iminetsoft.Iminetcore.AspNet.Models.GithubItem>())
+        @foreach(var item in await github.PublicRepos())
         {
             <tr>
                 <td class="nowrap"><a href="@item.Url" target="_blank">@item.Name</a></td>

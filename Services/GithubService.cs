@@ -47,23 +47,33 @@ namespace IminetSite.Services
             if (String.IsNullOrWhiteSpace(token)) throw new Exception("Missing GitHub token");
 
             var resp = new List<GithubItem>();
-            var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));
-            github.Credentials = new Credentials(token);
 
-            // Public access, public repo
-            var repolist = await github.Repository.GetAllForCurrent();
-
-            repolist.Where(r => !r.Private && !r.Archived).ToList().ForEach(r => resp.Add(new GithubItem()
+            try
             {
-                Name = r.Name,
-                CreatedAt = r.CreatedAt.DateTime,
-                Description = r.Description,
-                FullName = r.FullName,
-                PushedAt = r.PushedAt?.DateTime,
-                UpdatedAt = r.UpdatedAt.DateTime,
-                Url = new Uri(r.HtmlUrl),
-                IsFork = r.Fork
-            }));
+                var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));
+                github.Credentials = new Credentials(token);
+
+                // Public access, public repo
+                var repolist = await github.Repository.GetAllForCurrent();
+
+                repolist.Where(r => !r.Private && !r.Archived).ToList().ForEach(r => resp.Add(new GithubItem()
+                {
+                    Name = r.Name,
+                    CreatedAt = r.CreatedAt.DateTime,
+                    Description = r.Description,
+                    FullName = r.FullName,
+                    PushedAt = r.PushedAt?.DateTime,
+                    UpdatedAt = r.UpdatedAt.DateTime,
+                    Url = new Uri(r.HtmlUrl),
+                    IsFork = r.Fork
+                }));
+
+                logger?.LogDebug($"GitHub public repo list generated successfully");
+            }
+            catch(Exception ex)
+            {
+                logger?.LogError(ex.Message);
+            }
 
             return resp;
         }
