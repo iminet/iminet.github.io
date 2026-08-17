@@ -5,12 +5,30 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Deterministic>False</Deterministic>
+    <AssemblyVersion>1.1.$([System.DateTime]::UtcNow.Subtract($([System.DateTime]::new(2020,1,1))).Days).$([MSBuild]::Divide($([System.Convert]::ToInt32($([System.DateTime]::UtcNow.TimeOfDay.TotalSeconds))),2))</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>$(AssemblyVersion)</Version>
+
+    <RootNamespace>IminetSite</RootNamespace>
+    <AssemblyName>IminetSite</AssemblyName>
+    <Authors>Iminetsoft</Authors>
+    <RepositoryUrl>https://github.com/iminet/iminet.github.io</RepositoryUrl>
+    <Description>My website on GitHub</Description>
+    <Copyright>Copyright © 2026</Copyright>
+    <ApplicationIcon>./input/images/favicon.ico</ApplicationIcon>
+
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Iminetcore" Version="26.8.2419.568" />
     <PackageReference Include="Octokit" Version="14.0.0" />
     <PackageReference Include="Statiq.Web" Version="1.0.0-beta.60" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Watch Remove="obj\**\*" />
+    <Watch Remove="bin\**\*" />
   </ItemGroup>
 
 </Project>

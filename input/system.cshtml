@@ -1,0 +1,27 @@
+@*-
+Title: System Check
+DestinationPath: system-check/index.html
+IncludeInSitemap: false
+Description: System check for diagnostic purposes
+-*@
+
+<h1>System Check</h1>
+
+<section>
+    <p>This page is for diagnostic purposes only.</p>
+</section>
+
+<section>
+    <table>
+        <thead>
+            <tr><td class="nowrap">Key</td><td>Value</td></tr>
+        </thead>
+        @foreach(var item in common.SystemCheck())
+        {
+            <tr>
+                <td class="nowrap">@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </table>
+</section>

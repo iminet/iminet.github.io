@@ -51,7 +51,7 @@ namespace IminetSite.Services
             // Public access, public repo
             var repolist = await github.Repository.GetAllForUser("iminet"); 
 
-            repolist.Where(r => !r.Private).ToList().ForEach(r => resp.Add(new GithubItem()
+            repolist.Where(r => !r.Private && !r.Archived).ToList().ForEach(r => resp.Add(new GithubItem()
             {
                 Name = r.Name,
                 CreatedAt = r.CreatedAt.DateTime,
@@ -60,6 +60,7 @@ namespace IminetSite.Services
                 PushedAt = r.PushedAt?.DateTime,
                 UpdatedAt = r.UpdatedAt.DateTime,
                 Url = new Uri(r.HtmlUrl),
+                IsFork = r.Fork
             }));
 
             return resp;
