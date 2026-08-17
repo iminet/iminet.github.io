@@ -47,6 +47,7 @@ jobs:
       - name: Generate site
         env:
           STATIQ_TEST: ${{ vars.STATIQ_TEST }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SiteUrl: ${{ vars.SITE_URL }}
         run: dotnet run --no-restore -- -o output
 
