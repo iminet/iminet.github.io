@@ -22,12 +22,14 @@ namespace IminetSite.Services
 
         public async Task<string> Probe()
         {
-            using (var client = new HttpClient())
+            /*using (var client = new HttpClient())
             {
                 var result = await client.GetFromJsonAsync<ApiResult<string>>($"{settings.GetString("BACKEND_API_URL")}api/v2/ping");
 
                 return result?.Data ?? "Error";
-            }
+            }*/
+
+            return "Test";
         }
 
         public Dictionary<string,object> SystemCheck()
