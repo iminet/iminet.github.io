@@ -1,6 +1,7 @@
 using IminetSite.Configuration;
 using Iminetsoft.Iminetcore.Application;
 using Iminetsoft.Iminetcore.AspNet.Models;
+using Microsoft.Azure.Search.Common;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Octokit;
@@ -42,8 +43,8 @@ namespace IminetSite.Services
         public async Task<List<GithubItem>> PublicRepos()
         {
             /* This needs in the future for accessing authenticated */
-            //var token = settings.GetString("GITHUB_TOKEN");
-            //if (String.IsNullOrWhiteSpace(token)) return new();
+            var token = settings.GetString("GITHUB_TOKEN");
+            if (String.IsNullOrWhiteSpace(token)) throw new Exception("Missing GitHub token");
 
             var resp = new List<GithubItem>();
             var github = new GitHubClient(new ProductHeaderValue(AppInfo.AppName));

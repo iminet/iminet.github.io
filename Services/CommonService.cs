@@ -31,6 +31,7 @@ namespace IminetSite.Services
                 { "Version", AppVersion ?? String.Empty },
                 { "Site rendered", @DateTime.Now.ToString("yyyy/MM/dd HH:mm", System.Globalization.CultureInfo.InvariantCulture) },
                 { "Site URL", settings.GetString("SiteUrl") },
+                { "Config test string", settings.GetString("STATIQ_TEST") }
             };
 
             return result;

@@ -27,6 +27,10 @@ Desktop.ini
 # NuGet
 *.nupkg
 
+# Local environment variables
+**/*.env
+!.env.example
+
 # Publish profiles
 Properties/PublishProfiles/
 
