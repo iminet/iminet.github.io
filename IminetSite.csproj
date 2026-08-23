@@ -9,6 +9,8 @@
     <AssemblyVersion>1.1.$([System.DateTime]::UtcNow.Subtract($([System.DateTime]::new(2020,1,1))).Days).$([MSBuild]::Divide($([System.Convert]::ToInt32($([System.DateTime]::UtcNow.TimeOfDay.TotalSeconds))),2))</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 
     <RootNamespace>IminetSite</RootNamespace>
     <AssemblyName>IminetSite</AssemblyName>
