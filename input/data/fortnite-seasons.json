@@ -1,0 +1,82 @@
+{
+    "seasons": [
+    {
+        "title": "Chapter 7 Season 4 - Override",
+        "imageUrl": "/images/fortnite/fortnite_ch07se04_override.jpg",
+        "startDate": "2026-08-20",
+        "endDate": "2026-11-01"
+    },
+    {
+        "title": "Chapter 7 Season 3 - Runners",
+        "imageUrl": "/images/fortnite/fortnite_ch07se03_runners.jpg",
+        "startDate": "2026-06-06",
+        "endDate": "2026-08-19"
+    },
+    {
+        "title": "Chapter 7 Season 2 - Showdown",
+        "imageUrl": "/images/fortnite/fortnite_ch07se02_showdown.jpg",
+        "startDate": "2026-03-19",
+        "endDate": "2026-06-05"
+    },
+    {
+        "title": "Chapter 7 Season 1 - Pacific Break",
+        "imageUrl": "/images/fortnite/fortnite_ch07se01_pacific_break.jpg",
+        "startDate": "2025-11-29",
+        "endDate": "2026-03-19"
+    },
+    {
+        "title": "Chapter 6 Mini Season 2 - The Simpsons",
+        "imageUrl": "/images/fortnite/fortnite_ch06ms02_the_simpsons.jpg",
+        "startDate": "2025-11-01",
+        "endDate": "2025-11-29"
+    },
+    {
+        "title": "Chapter 6 Season 4 - Shock 'N Awesome",
+        "imageUrl": "/images/fortnite/fortnite_ch06se04_shock_n_awesome.jpg",
+        "startDate": "2025-08-08",
+        "endDate": "2025-11-01"
+    },
+    {
+        "title": "Chapter 6 Season 3 - Super",
+        "imageUrl": "/images/fortnite/fortnite_ch06se03_super.jpg",
+        "startDate": "2025-06-07",
+        "endDate": "2025-08-08"
+    },
+    {
+        "title": "Chapter 6 Mini Season 1 - Galactic Battle",
+        "imageUrl": "/images/fortnite/fortnite_ch06ms01_galactic_battle.jpg",
+        "startDate": "2025-05-02",
+        "endDate": "2025-06-07"
+    },
+    {
+        "title": "Chapter 6 Season 2 - Lawless",
+        "imageUrl": "/images/fortnite/fortnite_ch06se02_lawless.jpg",
+        "startDate": "2025-02-21",
+        "endDate": "2025-05-02"
+    },
+    {
+        "title": "Chapter 6 Season 1 - Hunters",
+        "imageUrl": "/images/fortnite/fortnite_ch06se01_hunters.jpg",
+        "startDate": "2024-12-01",
+        "endDate": "2025-02-21"
+    },
+    {
+        "title": "Chapter 5 Season 5 - Remix",
+        "imageUrl": "/images/fortnite/fortnite_ch05se05_remix.jpg",
+        "startDate": "2024-11-02",
+        "endDate": "2024-12-01"
+    },
+    {
+        "title": "Chapter 5 Season 4 - Absolute Doom",
+        "imageUrl": "/images/fortnite/fortnite_ch05se04_absolute_doom.jpg",
+        "startDate": "2024-08-16",
+        "endDate": "2024-11-02"
+    },
+    {
+        "title": "Chapter 5 Season 3 - Wrecked",
+        "imageUrl": "/images/fortnite/fortnite_ch05se03_wrecked.jpg",
+        "startDate": "2024-05-24",
+        "endDate": "2024-08-16"
+    }
+    ]
+}
